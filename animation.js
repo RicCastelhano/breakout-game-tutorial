@@ -38,7 +38,7 @@ let level1TypeBricks = [10, 10, 10, 5, 10];
 let brickTypeCount = [0, 0, 0, 0, 0];
 
 // We will have a special brick to expand the paddle temporarily. This variable will keep track if the timer is running or not
-let timerRunningRunning = false;
+let timerRunning = false;
 
 // Keep track of the key press status
 const keys = {
@@ -132,14 +132,14 @@ function brickCollisionDetection(){
                             break;
                         case 2:
                             if(!timerRunning){
-                                
+                                timerRunning = true;
                                 // Keep track of the key press statustimer = true;
                                 paddle.width *= 2;
-                                myTimeout = setTimeout((()=>{
+                                timeout = setTimeout((()=>{
                                     paddle.width = 75;
-                                    clearTimeout(myTimeout);
-                                    timer = false;
-                                }), 25000);
+                                    clearTimeout(timeout);
+                                    timerRunning = false;
+                                }), 5000);
                             }
                             break;
                     }
