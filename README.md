@@ -1,5 +1,7 @@
 # Breakout Game Tutorial
 
+The blog post is [here](https://creativecode.ricardocastelhano.net/2023-12-29-breakout-game/)
+
 By the end of the tutorial, you should get a similar game:
 
 ![Tile_1](/assets/breakout-game.png)
